@@ -1,0 +1,54 @@
+html{
+    background-color:white;
+}
+
+body{
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    color: #2f3437;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border-left-width: 0px;
+}
+
+.cabecalho{
+    display: flex;
+    background-color:lightgreen;
+    border-left: solid 5px green;
+}
+
+.cabecalho div{
+    background-color: green;
+    place-content: center;
+}
+
+.cartoes{
+  display: flex;
+  gap: 16px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+.cartao {
+  flex: 1;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+
+.cartao h2{
+  margin-top: 16px;
+  margin-bottom: 6px; 
+}
+
+.cabecatabela{
+background-color: lightgreen;
+border-bottom:5px solid green;
+}
