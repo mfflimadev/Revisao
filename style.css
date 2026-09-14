@@ -1,8 +1,10 @@
 html{
+    
     background-color:white;
 }
 
-body{
+body{ 
+    width: 599px;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 18px;
     line-height: 1;
@@ -11,9 +13,39 @@ body{
 
 table{
     border-collapse: collapse;
+    border:1px solid black;
     width: 100%;
-    border-left-width: 0px;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom: 1px solid black;
+    
 }
+
+td,th{
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom: 1px solid black;
+    padding: 8px;
+}
+
+.pagina{
+    display:grid;
+    grid-template-areas:
+        "cabecalho"
+
+        "html"
+        "css"
+        "semantica"
+        "flexbox"
+        "grid"
+        "git"
+        "projetos"
+        "contato"
+        "rodape";
+}
+
 
 .cabecalho{
     display: flex;
@@ -23,17 +55,25 @@ table{
 
 .cabecalho div{
     background-color: green;
-    place-content: center;
+    place-content: left;
+    padding: 0px 16px;
+    border-radius:10px;
+    margin:16px 20px;
+}
+
+.conteudo{
+    grid-area:conteudo;
 }
 
 .cartoes{
-  display: flex;
+  display: grid;
   gap: 16px;
   margin: 32px 0;
   flex-wrap: wrap;
 }
 
-.cartao {
+.html {
+  grid-area:html;
   flex: 1;
   border-top: 5px solid green; 
   padding:  2px 20px 16px 20px;
@@ -42,7 +82,66 @@ table{
   border-right: 1px solid rgb(153, 153, 137);
   border-bottom: 1px solid rgb(153, 153, 137);
 }
+.css {
+  grid-area:css;
+  
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.semantica {
+  grid-area:semantica;
+ 
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.flexbox {
+  grid-area:flexbox;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.grid {
+  grid-area: grid;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+ .git{
+  grid-area: git;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+ .projetos{
+  grid-area: projetos;
+}
 
+.contato{
+  grid-area: contato;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
 .cartao h2{
   margin-top: 16px;
   margin-bottom: 6px; 
@@ -51,4 +150,8 @@ table{
 .cabecatabela{
 background-color: lightgreen;
 border-bottom:5px solid green;
+}
+
+.rodape{
+    grid-area:rodape;
 }
