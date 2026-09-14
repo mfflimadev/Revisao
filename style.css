@@ -4,7 +4,8 @@ html{
 }
 
 body{ 
-    width: 599px;
+    margin:0 auto;
+    max-width: 599px;
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 18px;
     line-height: 1;
@@ -32,9 +33,10 @@ td,th{
 
 .pagina{
     display:grid;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "cabecalho"
-
+        "conteudo"
         "html"
         "css"
         "semantica"
@@ -43,27 +45,54 @@ td,th{
         "git"
         "projetos"
         "contato"
-        "rodape";
+        "rodape" ;
 }
 
 
 .cabecalho{
-    display: flex;
-    background-color:lightgreen;
+    display:grid;
+    place-items: center;
+    grid-template-areas:
+         "icone"
+        "usuario"
+         "curso"
+         "turma";
+    background-color:rgb(220, 231, 220);
     border-left: solid 5px green;
+    padding: 32px 16px 16px 8px;
 }
 
-.cabecalho div{
+   .icone{
+    display:flex;
+    place-content: center;
+    grid-area:icone;
+    width: 75px;
+    height: 75px;
     background-color: green;
-    place-content: left;
-    padding: 0px 16px;
+    padding: space-around;
     border-radius:10px;
-    margin:16px 20px;
-}
-
-.conteudo{
-    grid-area:conteudo;
-}
+    }
+    .icone h1{
+        color:white"
+    }
+    .usuario{
+    text-align:center;
+    grid-area:usuario;
+    margin-bottom:0px;
+    padding-bottom: 0px;
+    }
+    .curso{
+    grid-area:curso;
+    margin-top:0px;
+    color: green;
+    
+    }
+    .turma{
+    grid-area:turma;
+    color:grey;
+    margin-top: 8px;
+    padding:0%;
+    }
 
 .cartoes{
   display: grid;
@@ -74,7 +103,6 @@ td,th{
 
 .html {
   grid-area:html;
-  flex: 1;
   border-top: 5px solid green; 
   padding:  2px 20px 16px 20px;
   margin: 32px 16px 16px 16px;
@@ -84,7 +112,6 @@ td,th{
 }
 .css {
   grid-area:css;
-  
   border-top: 5px solid green; 
   padding:  2px 20px 16px 20px;
   margin: 32px 16px 16px 16px;
