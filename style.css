@@ -1,0 +1,211 @@
+html{
+    
+    background-color:#f0eaf8;
+}
+
+body{ 
+ 
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    color: #2f3437;
+}
+
+table{
+    border-collapse: collapse;
+    border:1px solid black;
+    width: 100%;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom: 1px solid black;
+    
+}
+
+td,th{
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom: 1px solid black;
+    padding: 8px;
+}
+
+.pagina{
+  background-color: white;
+    margin:auto;
+    padding: 40px;
+    max-width:599px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "cabecalho"
+        "conteudo"
+        "html"
+        "css"
+        "semantica"
+        "flexbox"
+        "grid"
+        "git"
+        "projetos"
+        "contato"
+        "rodape" ;
+}
+
+
+.cabecalho{
+    display:grid;
+    grid-column: cabecalho;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+         "icone"
+        "info";
+    background-color:rgb(220, 231, 220);
+    border-left: solid 5px green;
+    padding: 32px 16px 16px 8px;
+}
+
+   .icone{
+    display:flex;
+    place-content: center;
+    grid-area:icone;
+    width: 75px;
+    height: 75px;
+    background-color: green;
+    padding: space-around;
+    border-radius:10px;
+    }
+    .icone h1{
+        color:white;
+    }
+    .info{
+      line-height: 1;
+    text-align:center;
+    grid-area:info;
+    margin-bottom:0px;
+    padding-bottom: 0px;
+    
+    }
+    .info em{
+      color: green;
+      border:solid black 1px;
+      margin:0;
+    }
+    .info h1{
+      padding-bottom:0;
+      margin-bottom: 0;
+      border:solid black 1px;         
+    }
+
+.cartoes{
+  display: grid;
+  gap: 16px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+.html {
+  grid-area:html;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.css {
+  grid-area:css;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.semantica {
+  grid-area:semantica;
+ 
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.flexbox {
+  grid-area:flexbox;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.grid {
+  grid-area: grid;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+ .git{
+  grid-area: git;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+ .projetos{
+  grid-area: projetos;
+}
+
+.contato{
+  grid-area: contato;
+  border-top: 5px solid green; 
+  padding:  2px 20px 16px 20px;
+  margin: 32px 16px 16px 16px;
+  border-left: 1px solid rgb(153, 153, 137);
+  border-right: 1px solid rgb(153, 153, 137);
+  border-bottom: 1px solid rgb(153, 153, 137);
+}
+.cartao h2{
+  margin-top: 16px;
+  margin-bottom: 6px; 
+}
+
+.cabecatabela{
+background-color: lightgreen;
+border-bottom:5px solid green;
+}
+
+.rodape{
+    grid-area:rodape;
+}
+
+@media only screen and (min-width:600px){
+
+.pagina{
+  max-width:899px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+ "cabecalho cabecalho"
+ "conteudo conteudo"
+ "html css"
+ "semantica flexbox"
+ "grid git"
+ "projetos projetos"
+ "contato contato"
+ "rodape rodape" ;
+}
+
+
+.cabecalho{
+    place-items: center;
+    grid-template-areas:
+         "icone info";
+}
+}
