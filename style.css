@@ -13,12 +13,11 @@ body{
 
 table{
     border-collapse: collapse;
-    border:1px solid black;
     width: 100%;
-    border-left:none;
-    border-right:none;
+    border:solid 2px #dcd8d0;
     border-top:none;
-    border-bottom: 1px solid black;
+   
+    
     
 }
 
@@ -26,11 +25,15 @@ td,th{
     border-left:none;
     border-right:none;
     border-top:none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #dcd8d0;
     padding: 8px;
+}
+tr:nth-child(even){
+  background-color: #faf8f4 ;
 }
 
 .pagina{
+  
   background-color: white;
     margin:auto;
     padding: 40px;
@@ -48,7 +51,7 @@ td,th{
         "git"
         "projetos"
         "contato"
-        "rodape" ;
+        "rodape";
 }
 
 
@@ -58,139 +61,165 @@ td,th{
     place-items: center;
     grid-template-columns: 1fr;
     grid-template-areas:
-         "icone"
+        "icone"
         "info";
-    background-color:rgb(220, 231, 220);
-    border-left: solid 5px green;
+    background-color:#1b2733;
     padding: 32px 16px 16px 8px;
+    border-radius: 6px;
+}
+.cabecalho h1{
+  color: white;
 }
 
    .icone{
-    display:flex;
-    place-content: center;
+    text-align: center;
     grid-area:icone;
     width: 75px;
     height: 75px;
-    background-color: green;
+    background-color:#324d68;
     padding: space-around;
-    border-radius:10px;
+    border-radius:50px;
     }
     .icone h1{
+      font-size: 32px;
         color:white;
     }
     .info{
-      line-height: 1;
+    color:#324d68;
     text-align:center;
     grid-area:info;
     margin-bottom:0px;
     padding-bottom: 0px;
+    line-height: 1.2;
     
     }
     .info em{
-      color: green;
-      border:solid black 1px;
+      color:#e0a458;
       margin:0;
     }
     .info h1{
       padding-bottom:0;
       margin-bottom: 0;
-      border:solid black 1px;         
+               
     }
-
-.cartoes{
-  display: grid;
-  gap: 16px;
-  margin: 32px 0;
-  flex-wrap: wrap;
+.conteudo{
+  grid-area:conteudo;
+  padding:  2px 0px 0px 0px;
+}
+.conteudo h2 {
+    color: #1b2733;
+    margin-top: 48px;
+    padding-left: 14px;
+    border-left: 5px solid #c8553d;
 }
 
-.html {
-  grid-area:html;
-  border-top: 5px solid green; 
-  padding:  2px 20px 16px 20px;
+.html,.css,.semantica,.git,.flexbox,.grid{
   margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
+  min-width: 150px;
+  padding: 2px 20px 16px 20px;
+  border: 2px solid #dcd8d0;
+  border-radius: 6px;
+  background-color: #faf8f4;
 }
+.css h2,.semantica h2,.git h2,.grid h2,.flexbox h2,.html h2{
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: #c8553d;
+}
+
+.html,.css,.semantica,.git,.grid,.flexbox {
+  color: #2f3437;
+}
+
+.html{
+  grid-area:html;
+}
+
 .css {
   grid-area:css;
-  border-top: 5px solid green; 
-  padding:  2px 20px 16px 20px;
-  margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
 }
+
 .semantica {
-  grid-area:semantica;
- 
-  border-top: 5px solid green; 
-  padding:  2px 20px 16px 20px;
-  margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
+  grid-area:semantica; 
 }
+
 .flexbox {
   grid-area:flexbox;
-  border-top: 5px solid green; 
-  padding:  2px 20px 16px 20px;
-  margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
 }
+
 .grid {
   grid-area: grid;
-  border-top: 5px solid green; 
-  padding:  2px 20px 16px 20px;
-  margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
 }
  .git{
   grid-area: git;
-  border-top: 5px solid green; 
-  padding:  2px 20px 16px 20px;
-  margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
+  
 }
  .projetos{
   grid-area: projetos;
 }
+.projetos h2{
+    color: #1b2733;
+    margin-top: 48px;
+    padding-left: 14px;
+    border-left: 5px solid #c8553d;
+}
 
 .contato{
   grid-area: contato;
-  border-top: 5px solid green; 
+  background-color: rgb(222, 235, 240); 
   padding:  2px 20px 16px 20px;
   margin: 32px 16px 16px 16px;
-  border-left: 1px solid rgb(153, 153, 137);
-  border-right: 1px solid rgb(153, 153, 137);
-  border-bottom: 1px solid rgb(153, 153, 137);
+  border-radius: 6px;
 }
-.cartao h2{
-  margin-top: 16px;
-  margin-bottom: 6px; 
+.contato h2 {
+    color: #1b2733;
+    margin-top: 48px;
+    padding-left: 14px;
+    border-left: 5px solid #c8553d;
 }
 
+.contato a{
+ color:dodgerblue;
+}
+
+
 .cabecatabela{
-background-color: lightgreen;
-border-bottom:5px solid green;
+background-color:#1b2733;
+color:white;
+
 }
 
 .rodape{
+  display: grid;
     grid-area:rodape;
+    grid-template-columns: 1;
+    grid-template-areas: 
+         "rodape1"
+         "rodape2";
+    background-color: #dcd8d0;
+    color: #726f69;
+    margin-left: 32px auto;
+    border-radius: 6px;
+    border: #dcd8d0 solid 5px ;
+}
+.rodape1{
+  font-size:15px;
+  text-align: left;
+  grid-area:rodape1;
+  margin-left: 32px auto;
+}
+.rodape2 {
+  font-size:15px;
+  text-align: left;
+  grid-area: rodape2;
+  margin-right: 32px auto;
 }
 
 @media only screen and (min-width:600px){
 
 .pagina{
-  max-width:899px;
-  grid-template-columns: 1fr 1fr;
+  
+  grid-template-columns: auto auto;
   grid-template-areas:
  "cabecalho cabecalho"
  "conteudo conteudo"
@@ -202,10 +231,52 @@ border-bottom:5px solid green;
  "rodape rodape" ;
 }
 
-
+.rodape{
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "rodape1 rodape2";
+}
+.rodape2 {
+  text-align: right;
+}
 .cabecalho{
-    place-items: center;
+    place-content: left;
+    grid-template-columns: 75px 1fr;
     grid-template-areas:
          "icone info";
+    padding: 8px 16px 16px 16px;
+     column-gap: 16px;
+
 }
+
+.icone{
+ justify-self:left;
+ margin:8px;
+}
+.info{
+  justify-self: left;
+  text-align:left;
+}
+
+}
+@media only screen and (min-width:900px){
+  
+  .pagina{  
+    min-width: 900px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: 
+    "cabecalho cabecalho cabecalho cabecalho"
+    "conteudo conteudo conteudo contato"
+    "html css semantica . "
+    "flexbox grid git .  "
+    "projetos projetos projetos ."
+    "rodape rodape rodape rodape";
+  } 
+  .contato{
+    width:75%;
+    grid-row: 2/ span 2;
+    font-size: 13px;
+    
+  }
 }
